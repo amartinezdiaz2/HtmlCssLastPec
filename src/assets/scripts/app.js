@@ -1,3 +1,5 @@
+import 'lazysizes';
+
 const finDeViaje = {
     id: 1,
     titulo: "Fin de viaje",
@@ -216,14 +218,17 @@ if(window.location.href.includes("libros")){
         let source1 = document.createElement("source");
         source1.type = "image/webp";
         source1.srcset = libros[i].figureWebp.toString();
+        source1.className = "lazyload";
         figure.appendChild(source1);
         let source2 = document.createElement("source");
         source2.type = "image/jpeg";
         source2.srcset = libros[i].figure.toString();
+        source2.className = "lazyload";
         figure.appendChild(source2);
         let img = document.createElement("img");
         img.src = libros[i].figure.toString();
         img.loading = "lazy";
+        img.className = "lazyload";
         figure.appendChild(img);
         firstDiv.appendChild(figure);
     
