@@ -1,0 +1,18 @@
+/**
+ * Import variables
+ */
+
+ @import "variables";
+
+ /**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+
+@import "layouts/home";
+
+ /**
+ * Import icon library
+ */
+
+@import "npm:@fortawesome/fontawesome-free/css/all.css"

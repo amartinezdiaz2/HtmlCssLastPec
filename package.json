@@ -1,0 +1,27 @@
+{
+  "name": "my-project",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "npm-run-all clean stylelint parcel:dev",
+    "build": "npm-run-all clean stylelint parcel:build",
+    "parcel:dev": "parcel --open",
+    "parcel:build": "parcel build",
+    "clean": "rimraf dist .cache .cache-loader .parcel-cache",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "stylelint": "stylelint src/**/*.scss"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.1.1",
+    "@parcel/transformer-sass": "^2.5.0",
+    "autoprefixer": "^10.4.7",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.5.0",
+    "rimraf": "^3.0.2",
+    "sharp": "^0.29.3",
+    "stylelint": "^14.8.2",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-scss": "^4.2.0"
+  }
+}

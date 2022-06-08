@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../assets/styles/main.scss">
+        <title id="title">Virginia Woolf</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <svg width="41" height="56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="fourth" x="6" y="0" width="35" height="50" />
+                    <rect class="third" x="4" y="2" width="35" height="50" />
+                    <rect class="second" x="2" y="4" width="35" height="50" />
+                    <rect class="first" x="0" y="6" width="35" height="50"/>
+                    <polygon points="0 6 35 6 35 56 0 56" fill="white"/>
+                </svg>
+                Virginia Woolf
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Portada</a></li>
+                <li><a href="./libros.html">Libros</a></li>
+                <li><a href="./biografía.html">Biografía</a></li>
+                <li><a href="./bibliografía.html">Bibliografía</a></li>
+            </ul>
+        </nav>
+        <main id="detalle">
+            <div class="informacion">
+                <picture>
+                    <source type="image/webp" srcset="../assets/img/books/FinDeViaje.webp">
+                    <source type="image/jpeg" srcset="../assets/img/books/FinDeViaje.jpg">
+                    <img loading="lazy" src="../assets/img/books/FinDeViaje.jpg" alt="">
+                </picture>
+                <div class="centro">
+                    <h1>Fin de viaje</h1>
+                    <button class="botonCategoria">Novela</button>
+                    <h3>Resumen: </h3>
+                    <p>
+                        Todo empieza a principio de los 20 en Londres, siguiendo la vida de Helen 
+                        Ambrose y su marido Ridley. Se están preparando para un viaje largo al 
+                        extranjero, un lugar de la costa de Sudamérica. La embarcación la hacen 
+                        en un barco del cuñado de Helen y también se encuentra la sobrina de Helen, 
+                        Rachel, que se dirigía al Congo con su padre hasta que Helen sugiere que les 
+                        acompañe en el viaje. Al padre, Willioughby Vinrace, el parece una idea 
+                        estupenda para que Helen lleve a Rachel por el buen camino de las mujeres. 
+                        Sin embargo, Helen, tiene otras intenciones: que sea ella misma quien 
+                        encuentre su camino.
+                    </p>
+                    <h3>Fecha de publicación: </h3>
+                    <p>1915</p>
+                </div>
+                <div class="derecha">
+                    <h3>Otras novelas de la autora: </h3>
+                </div>
+            </div>
+
+            
+        </main>
+        <script async type="module" src="../assets/scripts/app.js"></script>
+        <footer>
+            <svg width="41" height="56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect class="fourth" x="6" y="0" width="35" height="50" />
+                <rect class="third" x="4" y="2" width="35" height="50" />
+                <rect class="second" x="2" y="4" width="35" height="50" />
+                <rect class="first" x="0" y="6" width="35" height="50"/>
+                <polygon points="0 6 35 6 35 56 0 56" fill="white"/>
+            </svg>
+            <ul>
+                <li><a href="../index.html">Portada</a></li>
+                <li class="footer-display">
+                    <a href="./libros.html" class="current">Libros</a>
+                    <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <ul>
+                        <li>
+                            Novelas
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="novelas-footer"></ul>
+                        </li>
+                        <li>
+                            Cuentos
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="cuentos-footer"></ul>
+                        </li>
+                        <li>
+                            Biografías
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="biografias-footer"></ul>
+                        </li>
+                        <li>
+                            Ensayos
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="ensayos-footer"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="./biografía.html">Biografía</a></li>
+                <li><a href="./bibliografía.html">Bibliografía</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="assets/styles/main.scss">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <title>Virginia Woolf</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <svg width="41" height="56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="fourth" x="6" y="0" width="35" height="50" />
+                    <rect class="third" x="4" y="2" width="35" height="50" />
+                    <rect class="second" x="2" y="4" width="35" height="50" />
+                    <rect class="first" x="0" y="6" width="35" height="50"/>
+                    <polygon points="0 6 35 6 35 56 0 56" fill="white"/>
+                </svg>
+                Virginia Woolf
+            </h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="current">Portada</a></li>
+                <li><a href="views/libros.html">Libros</a></li>
+                <li><a href="views/biografía.html">Biografía</a></li>
+                <li><a href="views/bibliografía.html">Bibliografía</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="figures">
+                <figure id="woolfuno">
+                    <img loading="lazy" srcset="
+                        assets/img/VirginiaWoolf.jpg 640w,
+                        assets/img/VirginiaWoolf2.jpg 502w"
+                        sizes="
+                            (max-width: 600px) 80vw,
+                            (max-width: 1000px) 25vw,
+                            (max-width: 2000px) 30vw" 
+                        src="assets/img/VirginiaWoolf.jpg" 
+                        alt="Virginia Woolf">
+                </figure>
+                <figure id="woolfdos">
+                    <img loading="lazy" srcset="
+                        assets/img/Virginia_Woolf_1927.jpg 640w,
+                        assets/img/Virginia_Woolf_1927_2.jpg 502w,
+                        assets/img/Virginia_Woolf_1927_2.jpg 502w"
+                        sizes="
+                            (max-width: 600px) 80vw,
+                            (max-width: 1000px) 25vw,
+                            (max-width: 2000px) 30vw" 
+                        src="assets/img/Virginia_Woolf_1927.jpg" 
+                        alt="Virginia Woolf">
+                </figure>
+                <figure id="woolftres">
+                    <img loading="lazy" srcset="
+                        assets/img/Woolf_by_Beresford_3.jpg 640w,
+                        assets/img/Woolf_by_Beresford_32.jpg 479w"
+                        sizes="
+                            (max-width: 600px) 80vw,
+                            (max-width: 1000px) 25vw,
+                            (max-width: 2000px) 30vw" 
+                        src="assets/img/Woolf_by_Beresford_3.jpg" 
+                        alt="Virginia Woolf">
+                </figure>
+            </div>
+            <div class="biografia">
+                <p>
+                    Virginia Woolf, cuyo nombre origialmente era Adeline Virginia Stephen, (nacida 
+                    el 25 de enero de 1882 en Londres y con fecha de defunción el 28 de marzo de
+                    1941 cerca de Rodmell, Sussex) es una escritora inglesa cuyas novelas, a través 
+                    de sus enfoques no lineales de la narrativa, ejerció una gran influencia en el género.
+                </p>
+                <a href="views/biografía.html">Leer su biografía...</a>
+            </div>
+            <div class="libros">
+                <p>
+                    Fueron muchas las obras que Virginia escribió a lo largo de su vida, y muchas otras
+                    que se publicaron póstumamente. Además, aunque Woolf es conocida por su novela 
+                    <a href="views/librodetalle.html"><i class="fa-solid fa-book"></i> Fin de viaje</a> se lanzó a escribir en diversas maneras,
+                    pasando por la novela, cuentos, biografías y ensayos.
+                </p>
+                <a href="views/bibliografía.html">Listado de libros...</a>
+            </div>
+        </main>
+        <footer>
+            <svg width="41" height="56" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect class="fourth" x="6" y="0" width="35" height="50" />
+                <rect class="third" x="4" y="2" width="35" height="50" />
+                <rect class="second" x="2" y="4" width="35" height="50" />
+                <rect class="first" x="0" y="6" width="35" height="50"/>
+                <polygon points="0 6 35 6 35 56 0 56" fill="white"/>
+            </svg>
+            <ul>
+                <li><a href="./index.html" class="current">Portada</a></li>
+                <li class="footer-display">
+                    <a href="views/libros.html">Libros</a>
+                    <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <ul>
+                        <li>
+                            Novelas
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="novelas-footer"></ul>
+                        </li>
+                        <li>
+                            Cuentos
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="cuentos-footer"></ul>
+                        </li>
+                        <li>
+                            Biografías
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="biografias-footer"></ul>
+                        </li>
+                        <li>
+                            Ensayos
+                            <button class="footer-list"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                            <ul id="ensayos-footer"></ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="views/biografía.html">Biografía</a></li>
+                <li><a href="views/bibliografía.html">Bibliografía</a></li>
+            </ul>
+        </footer>
+        <script async type="module" src="assets/scripts/app.js"></script>
+    </body>
+</html>

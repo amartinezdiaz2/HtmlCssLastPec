@@ -1,0 +1,609 @@
+* {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: $font-lora;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: $blanco;
+
+    @media screen and (orientation: portrait) { font-size: .9rem; }
+}
+
+button { cursor: pointer; }
+
+p { margin-bottom: 10px; }
+
+header {
+    font-size: 1.2rem;
+    color: $blanco;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $blanco;
+
+    @media screen and (orientation: portrait) { font-size: 1rem; }
+}
+
+header h1 {
+    padding: 20px 0;
+    background: url(../img/WoolfLook.jpg) 100% 100%;
+    background-position: center;
+    border-bottom: solid 2px $violeta-oscuro;
+}
+
+/*
+* ++++++++++++ LOGO ++++++++++++++++++++++++++
+*/
+
+svg {
+    position: relative;
+    top: 15px;
+}
+
+polygon {
+    animation: 3s poly infinite alternate ease-in-out;
+    @keyframes poly {
+
+        from {
+            -webkit-clip-path: polygon(5 18,10 13,20 33,22 23,27 28,20 41);
+            clip-path: polygon(5 18,10 13,20 33,22 23,27 28,20 41);
+        }
+        
+        to {
+          -webkit-clip-path: polygon(7 23,15 26,20 33,30 11,32 18,20 41);
+          clip-path: polygon(7 23,15 26,20 33,30 11,32 18,20 41);
+        }
+    }
+}
+
+.first,
+.fourth { fill: $violeta-oscuro; }
+
+.second { fill: $violeta-claro; }
+
+.third { fill: $violeta; }
+
+/*
+* ++++++++++++++++++++++++++++++++++++++
+*/
+
+nav {
+    padding: 10px 0;
+    text-align: center;
+    background-color: $violeta;
+    border-bottom: solid 2px $violeta-oscuro;
+}
+
+h1:not(header h1) {
+    padding: 30px 0;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+a {
+    font-weight: 500;
+    color: $negro;
+    text-decoration: none;
+}
+
+nav a { color: $blanco; }
+
+a:hover { color: $naranja; }
+
+.current {
+    font-weight: 800;
+    color: $violeta-oscuro;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 450px;
+    margin: auto;
+    font-size: 1.2rem;
+    list-style: none;
+
+    @media screen and (orientation: portrait){
+        display: block;
+        font-size: 1rem;
+    }
+}
+
+/**
+* ++++++++++++++++++++++++ Página de inicio +++++++++++++++++++++++++++++++++++++++++++++++++++++
+*/
+
+.figures {
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    padding: 30px 0;
+    margin: auto;
+}
+
+.figures figure,
+.figures img {
+    max-width: 400px;
+    max-height: 550px;
+    transition: transform 1s ease-out;
+}
+
+.figures img { border-radius: 10px; }
+
+#woolfuno,
+#woolftres { clip-path: polygon(33% 10%,66% 10%,100% 60%,0% 60%); }
+
+#woolfdos { clip-path: polygon(0% 10%,100% 10%,66% 60%,33% 60%); }
+
+@media screen and (max-width: 600px) {
+
+    .figures figure,
+    .figures img {
+        max-width: 300px;
+        max-height: 450px;
+    }
+
+    .figures figure{ margin-top: 30px; }
+
+    #woolfuno, 
+    #woolftres { display: none; }
+
+    #woolfdos { clip-path: polygon(0% 0%,0% 100%,100% 100%,100% 0%); }
+
+}
+
+.biografia, 
+.libros {
+    width: 90vw;
+    max-width: 1000px;
+    padding: 10px;
+    margin: 30px auto;
+    border: solid 2px $violeta;
+    border-radius: 5px;
+}
+
+/* ++++++++++++++++++++++++++++++++ BIOGRAFIA ++++++++++++++++++++++++++++++++++++++*/
+
+.foto {
+    display: grid;
+    grid-template: 13% 18% 13% 25% 31% / 40% 60%;
+    max-width: 1300px;
+    margin: 30px auto;
+}
+
+.foto figure {
+    max-width: 500px;
+    max-height: 680px;
+    padding: 10px;
+    background-color: $violeta;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    -webkit-clip-path: url(#newClip);
+    clip-path: url(#newClip);
+    border-radius: 10px;
+    animation-name: clip;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes clip {
+
+    0% {
+        -webkit-clip-path: polygon(6% 5%,64% 3%,90% 33%,74% 50%,87% 64%,40% 94%,10% 79%,14% 48%);
+        clip-path: polygon(6% 5%,64% 3%,90% 33%,74% 50%,87% 64%,40% 94%,10% 79%,14% 48%);
+    }
+
+    33% {
+        -webkit-clip-path: polygon(35% 4%,77% 18%,82% 41%,80% 57%,63% 79%,25% 86%,12% 63%,10% 26%);
+        clip-path: polygon(35% 4%,77% 18%,82% 41%,80% 57%,63% 79%,25% 86%,12% 63%,10% 26%);
+    }
+
+    66% {
+        -webkit-clip-path: polygon(56% 11%,79% 29%,81% 49%,71% 68%,44% 82%,18% 74%,11% 44%,22% 15%);
+        clip-path: polygon(56% 11%,79% 29%,81% 49%,71% 68%,44% 82%,18% 74%,11% 44%,22% 15%);
+    }
+
+    100% {
+        -webkit-clip-path: polygon(67% 20%,80% 39%,76% 58%,57% 75%,31% 78%,14% 59%,16% 29%,39% 13%);
+        clip-path: polygon(67% 20%,80% 39%,76% 58%,57% 75%,31% 78%,14% 59%,16% 29%,39% 13%);
+    }
+}
+
+.foto p {
+    margin: 0 10px;
+    text-align: justify;
+}
+
+.foto figure,
+.foto img { grid-area: 1 / 1 / 6 / 2; }
+
+.foto-display1 { grid-area: 1 / 2 / 2 / 3; }
+
+.foto-display2 { grid-area: 2 / 2 / 3 / 3; }
+
+.foto-display3 { grid-area: 3 / 2 / 4 / 3; }
+
+.foto-display4 { grid-area: 4 / 2 / 5 / 3; }
+
+.foto-display5 { grid-area: 5 / 2 / 6 / 3; }
+
+@media screen and (max-width: 1200px) {
+
+    .foto { grid-template: 12% 17% 12% 30% 29% / 40% 60%; }
+
+    .foto figure,
+    .foto img { grid-area: 1 / 1 / 5 / 2; }
+    
+    .foto-display1 { grid-area: 1 / 2 / 2 / 3; }
+    
+    .foto-display2 { grid-area: 2 / 2 / 3 / 3; }
+    
+    .foto-display3 { grid-area: 3 / 2 / 4 / 3; }
+    
+    .foto-display4 { grid-area: 4 / 2 / 5 / 3; }
+    
+    .foto-display5 { grid-area: 5 / 1 / 6 / 3; }
+}
+
+@media screen and (max-width: 900px) {
+
+    .foto { grid-template: 15% 20% 15% 20% 30% / 35% 65%; }
+
+    .foto figure,
+    .foto img { grid-area: 1 / 1 / 4 / 2; }
+    
+    .foto-display1 { grid-area: 1 / 2 / 2 / 3; }
+    
+    .foto-display2 { grid-area: 2 / 2 / 3 / 3; }
+    
+    .foto-display3 { grid-area: 3 / 2 / 4 / 3; }
+    
+    .foto-display4 { grid-area: 4 / 1 / 5 / 3; }
+    
+    .foto-display5 { grid-area: 5 / 1 / 6 / 3; }
+}
+
+@media screen and (max-width: 750px) {
+
+    .foto { display: block; }
+
+    .foto figure { margin: auto; }
+
+    .foto img { max-height: 650px; }
+
+    .foto p { 
+        margin-right: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px; 
+    }
+
+    .foto .foto-display1 { margin-top: 20px; }
+
+    .foto .foto-display5 { margin-bottom: 50px; }
+}
+
+/* ++++++++++++++++++++++++++++++++ BIBLIOGRAFIA +++++++++++++++++++++++++++++++++++++*/
+
+ol {
+    width: 85vw;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+/* ++++++++++++++++++++++++++++++++ FOOTER ++++++++++++++++++++++++++++++++++++++++++++ */
+
+footer {
+    display: flex;
+    padding: 20px;
+    background: $violeta-claro;
+    background: -webkit-linear-gradient(90deg,$violeta-claro,$violeta-oscuro);
+    background: linear-gradient(90deg,$violeta-claro,$violeta-oscuro);
+
+    @media screen and (min-width: 1350px){ padding-left: 20%; }
+}
+
+footer svg {
+    top: 30px;
+    margin-right: 20px;
+}
+
+footer ul {
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+.footer-display,
+.footer-display li { display: flex; }
+
+.footer-display ul { display: none; }
+
+.footer-display ul li { margin-bottom: 10px; }
+
+.footer-button {
+    width: 180px;
+    height: 30px;
+    color: $blanco;
+    background-color: $violeta-oscuro;
+    border: solid 1px $blanco;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.footer-button:hover {
+    font-size: 1rem;
+    border-color: $violeta;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++ LIBROS ++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.categoria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: auto;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: 1fr 1fr;
+        max-width: 900px;
+    }
+
+    @media screen and (orientation: portrait){
+        display: block;
+        max-width: 425px;
+    }
+}
+
+.categoria figure, 
+.categoria img {
+    max-width: 200px;
+    max-height: 300px;
+
+    @media screen and (orientation: portrait){
+
+        max-width: 150px;
+        max-height: 250px;
+    }
+}
+
+.Novela,
+.Ensayo,
+.Cuento,
+.Biografia {
+    display: flex;
+    max-width: 425px;
+    padding: 10px;
+    margin: 10px;
+    background-color: $violeta-claro;
+    border-radius: 5px;
+
+    @media screen and (orientation: portrait){ max-width: 350px; }
+}
+
+.Novela div,
+.Ensayo div,
+.Cuento div,
+.Biografia div { margin-left: 10px; }
+
+.coleccion button {
+    width: 70px;
+    height: 100%;
+    padding: 5px;
+    background-color: $blanco;
+    border: solid 1px $violeta;
+    border-radius: 5px;
+    transition: background-color 1s ease-out;
+}
+
+button.tras {
+    color: $blanco;
+    background-color: $violeta;
+}
+
+button:not(.coleccion button, .libro-boton, footer button) {
+    width: 60px;
+    height: 30px;
+    color: $blanco;
+    background-color: $violeta-oscuro;
+    border: none;
+    border-radius: 5px;
+    transition: color 1s ease-out;
+}
+
+.coleccion button:hover { 
+    color: $blanco;
+    background-color: $violeta; 
+}
+
+.footer-display button:not(.footer-button) {
+    width: 15px;
+    height: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+    border: none;
+}
+
+button:hover:not(.coleccion button, footer button) { color: $naranja; }
+
+.footer-display button:hover:not(.footer-button) {
+    color: $blanco;
+    background-color: $violeta;
+}
+
+.coleccion ul li {
+    max-width: 100px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+}
+
+.coleccion ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 450px;
+    margin: auto;
+    margin-top: 5px;
+    font-size: 1.2rem;
+    list-style: none;
+}
+
+@media screen and (orientation: portrait) {
+
+    .coleccion button {
+        margin: 0 15px;
+        border: none;
+    }
+
+    .coleccion ul { display: block; }
+
+    .coleccion li {
+        margin: auto;
+        border-bottom: solid 1px $violeta-oscuro;
+        border-bottom-right-radius: 7px;
+    }
+}
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++ LIBRO +++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+.informacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: 90vw;
+    max-width: 1200px;
+    padding: 50px;
+    margin: 50px auto;
+    background-color: $violeta-claro;
+    border-radius: 50px;
+}
+
+.derecha {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.derecha h3 { margin-top: 10px; }
+
+.derecha ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 1100px;
+    height: 450px;
+    padding: 10px;
+    margin: 5px auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    list-style: none;
+    background: $violeta-claro;
+    background: -webkit-linear-gradient(90deg,$violeta-claro,$violeta-oscuro);
+    background: linear-gradient(90deg,$violeta-claro,$violeta-oscuro);
+    border: solid 5px $violeta-oscuro;
+
+    @media screen and (orientation: portrait) {
+        display: block;
+        width: 200px;
+        height: 400px;
+        margin: auto;
+        overflow-x: scroll;
+    }
+}
+
+.derecha ul li {
+    max-width: 150px;
+    margin: 5px auto;
+}
+
+.informacion img { width: 100%; }
+
+.derecha ul li figure {
+    width: 150px;
+    height: 210px;
+    margin-bottom: 5px;
+}
+
+.derecha ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+.figures figure:hover { transform: scale(1.3,1.3); }
+
+.informacion figure:not(.derecha figure) {
+    width: 60vw;
+    max-width: 300px;
+    margin: auto;
+}
+
+@media screen and (orientation: portrait) {
+
+    .informacion{
+        display: block;
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    .derecha ul li figure {
+        width: 130px;
+        height: 190px;
+    }
+
+    .informacion figure:not(.derecha figure){ 
+        max-width: 250px;
+        margin: auto; 
+    }
+
+    .centro h1{ text-align: center; }
+
+    .derecha ul li { max-width: 130px; }
+}
+
+.centro p {
+    max-width: 500px;
+    text-align: justify;
+}
+
+.centro h1 {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.centro h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+@media screen and (orientation: portrait) {
+    
+    .centro { margin: auto; }
+
+    .centro h1 { text-align: center; }
+
+    .centro p { max-width: 90vw; }
+}
+
+.libro-boton {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    color: $blanco;
+    background-color: $violeta-oscuro;
+    border: none;
+    border-radius: 5px;
+}
+
+#novelas-footer li,
+#cuentos-footer li,
+#biografias-footer li,
+#ensayos-footer li { margin: 0; }
