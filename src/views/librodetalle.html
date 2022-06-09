@@ -4,7 +4,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="../assets/styles/main.scss">
+        <link rel="preload" href="../assets/styles/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="../assets/styles/main.scss"></noscript>
+        <style type="text/css">
+            .fa, .fas, .fa-solid, .far, .fa-regular, .fal, .fa-light, .fat, .fa-thin, .fad, .fa-duotone, .fab, .fa-brands {
+                -moz-osx-font-smoothing: grayscale;
+                -webkit-font-smoothing: antialiased;
+                display: var(--fa-display, inline-block);
+                font-variant: normal;
+                text-rendering: auto;
+                font-style: normal;
+                line-height: 1;
+            }
+        </style>
         <title id="title">Virginia Woolf</title>
     </head>
     <body>
@@ -31,9 +43,12 @@
         <main id="detalle">
             <div class="informacion">
                 <picture>
-                    <source class="lazyload" type="image/webp" srcset="../assets/img/books/FinDeViaje.webp">
-                    <source class="lazyload" type="image/jpeg" srcset="../assets/img/books/FinDeViaje.jpg">
-                    <img class="lazyload" loading="lazy" src="../assets/img/books/FinDeViaje.jpg" alt="">
+                    <source type="image/webp" 
+                        srcset="../assets/img/books/small/FinDeViaje-small.webp 200w, ../assets/img/books/smallest/FinDeViaje-smallest.webp 150w">
+                    <source type="image/jpeg" 
+                        srcset="../assets/img/books/small/FinDeViaje-small.jpg 200w, ../assets/img/books/smallest/FinDeViaje-smallest.jpg 150w">
+                    <img src="../assets/img/books/small/FinDeViaje-small.jpg" alt="" 
+                        srcset="../assets/img/books/small/FinDeViaje-small.jpg 200w, ../assets/img/books/smallest/FinDeViaje-smallest.jpg 150w">
                 </picture>
                 <div class="centro">
                     <h1>Fin de viaje</h1>
