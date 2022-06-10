@@ -16,6 +16,262 @@
                 font-style: normal;
                 line-height: 1;
             }
+
+            :root,:host {
+                --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+                --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+                --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+            }
+
+            .fas,.fa-solid {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0
+            }
+
+            body {
+                background-color: #fff;
+                font-family: Lora;
+                font-weight: 400;
+                line-height: 1.5
+            }
+
+            @media screen and (orientation: portrait) {
+                body {
+                    font-size:.9rem
+                }
+            }
+
+            button {
+                cursor: pointer
+            }
+
+            p {
+                margin-bottom: 10px
+            }
+
+            header {
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: #fff;
+                font-size: 1.2rem
+            }
+
+            @media screen and (orientation: portrait) {
+                header {
+                    font-size:1rem
+                }
+            }
+
+            header h1 {
+                background: url(../assets/img/WoolfLook.webp) 50%;
+                border-bottom: 2px solid #330b61;
+                padding: 20px 0
+            }
+
+            svg {
+                position: relative;
+                top: 15px
+            }
+
+            polygon {
+                animation: poly 3s ease-in-out infinite alternate
+            }
+
+            .first,.fourth {
+                fill: #330b61
+            }
+
+            .second {
+                fill: #d0b1f3
+            }
+
+            .third {
+                fill: #822be6
+            }
+
+            nav {
+                text-align: center;
+                background-color: #822be6;
+                border-bottom: 2px solid #330b61;
+                padding: 10px 0
+            }
+
+            a {
+                color: #000;
+                font-weight: 500;
+                text-decoration: none
+            }
+
+            nav a {
+                color: #fff
+            }
+
+            .current {
+                color: #330b61;
+                font-weight: 800
+            }
+
+            nav ul {
+                width: 90vw;
+                max-width: 450px;
+                justify-content: space-between;
+                margin: auto;
+                font-size: 1.2rem;
+                list-style: none;
+                display: flex
+            }
+
+            @media screen and (orientation: portrait) {
+                nav ul {
+                    font-size:1rem;
+                    display: block
+                }
+            }
+
+            footer {
+                background: linear-gradient(90deg,#d0b1f3,#330b61);
+                padding: 20px;
+                display: flex
+            }
+
+            footer svg {
+                margin-right: 20px;
+                top: 30px
+            }
+
+            footer ul {
+                font-size: 1.2rem;
+                list-style: none
+            }
+
+            .footer-display,.footer-display li {
+                display: flex
+            }
+
+            .footer-display ul {
+                display: none
+            }
+
+            .categoria {
+                max-width: 1300px;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: space-between;
+                margin: auto;
+                display: grid
+            }
+
+            @media screen and (max-width: 1300px) {
+                .categoria {
+                    max-width:900px;
+                    grid-template-columns: 1fr 1fr
+                }
+            }
+
+            @media screen and (orientation: portrait) {
+                .categoria {
+                    max-width:425px;
+                    display: block
+                }
+            }
+
+            .categoria picture,.categoria img {
+                max-width: 200px;
+                max-height: 300px
+            }
+
+            @media screen and (orientation: portrait) {
+                .categoria picture,.categoria img {
+                    max-width:150px;
+                    max-height: 250px
+                }
+            }
+
+            .Novela,.Ensayo,.Cuento,.Biografia {
+                max-width: 425px;
+                background-color: #d0b1f3;
+                border-radius: 5px;
+                margin: 10px;
+                padding: 10px;
+                display: flex
+            }
+
+            @media screen and (orientation: portrait) {
+                .Novela,.Ensayo,.Cuento,.Biografia {
+                    max-width:350px
+                }
+            }
+
+            .Novela div,.Ensayo div,.Cuento div,.Biografia div {
+                margin-left: 10px
+            }
+
+            .coleccion button {
+                width: 70px;
+                height: 100%;
+                background-color: #fff;
+                border: 1px solid #822be6;
+                border-radius: 5px;
+                padding: 5px;
+                transition: background-color 1s ease-out
+            }   
+
+            button:not(.coleccion button):not(.libro-boton):not(footer button) {
+                width: 60px;
+                height: 30px;
+                color: #fff;
+                background-color: #330b61;
+                border: none;
+                border-radius: 5px;
+                transition: color 1s ease-out
+            }
+
+            .footer-display button:not(.footer-button) {
+                width: 15px;
+                height: 30px;
+                border: none;
+                margin-left: 5px;
+                margin-right: 10px
+            }
+
+            .coleccion ul li {
+                max-width: 100px;
+                padding-top: 1px;
+                padding-bottom: 5px
+            }
+
+            .coleccion ul {
+                width: 90vw;
+                max-width: 450px;
+                justify-content: space-between;
+                margin: 5px auto auto;
+                font-size: 1.2rem;
+                list-style: none;
+                display: flex
+            }
+
+            @media screen and (orientation: portrait) {
+                .coleccion button {
+                    border:none;
+                    margin: 0 15px
+                }
+
+                .coleccion ul {
+                    display: block
+                }
+
+                .coleccion li {
+                    border-bottom: 1px solid #330b61;
+                    border-bottom-right-radius: 7px;
+                    margin: auto
+                }
+            }
         </style>
         <title id="title">Virginia Woolf</title>
     </head>
@@ -48,7 +304,8 @@
                     <source type="image/jpeg" 
                         srcset="../assets/img/books/small/FinDeViaje-small.jpg 200w, ../assets/img/books/smallest/FinDeViaje-smallest.jpg 150w">
                     <img src="../assets/img/books/small/FinDeViaje-small.jpg" alt="" 
-                        srcset="../assets/img/books/small/FinDeViaje-small.jpg 200w, ../assets/img/books/smallest/FinDeViaje-smallest.jpg 150w">
+                        srcset="../assets/img/books/small/FinDeViaje-small.jpg 200w, ../assets/img/books/smallest/FinDeViaje-smallest.jpg 150w"
+                        width="300" height="450">
                 </picture>
                 <div class="centro">
                     <h1>Fin de viaje</h1>

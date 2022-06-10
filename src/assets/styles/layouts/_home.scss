@@ -126,7 +126,7 @@ nav ul {
     margin: auto;
 }
 
-.figures figure,
+.figures picture,
 .figures img {
     max-width: 400px;
     max-height: 550px;
@@ -142,13 +142,13 @@ nav ul {
 
 @media screen and (max-width: 600px) {
 
-    .figures figure,
+    .figures picture,
     .figures img {
         max-width: 300px;
         max-height: 450px;
     }
 
-    .figures figure{ margin-top: 30px; }
+    .figures picture{ margin-top: 30px; }
 
     #woolfuno, 
     #woolftres { display: none; }
@@ -170,10 +170,10 @@ nav ul {
 /* ++++++++++++++++++++++++++++++++ BIOGRAFIA ++++++++++++++++++++++++++++++++++++++*/
 
 .foto {
-    display: grid;
-    grid-template: 13% 18% 13% 25% 31% / 40% 60%;
     max-width: 1300px;
     margin: 30px auto;
+    padding-right: 20px;
+    min-height: 700px;
 }
 
 .foto figure {
@@ -181,6 +181,8 @@ nav ul {
     max-height: 680px;
     padding: 10px;
     background-color: $violeta;
+    float: left;
+    margin-right: 30px;
 }
 
 .foto img {
@@ -219,64 +221,17 @@ nav ul {
 }
 
 .foto p {
-    margin: 0 10px;
     text-align: justify;
-}
-
-.foto figure,
-.foto img { grid-area: 1 / 1 / 6 / 2; }
-
-.foto-display1 { grid-area: 1 / 2 / 2 / 3; }
-
-.foto-display2 { grid-area: 2 / 2 / 3 / 3; }
-
-.foto-display3 { grid-area: 3 / 2 / 4 / 3; }
-
-.foto-display4 { grid-area: 4 / 2 / 5 / 3; }
-
-.foto-display5 { grid-area: 5 / 2 / 6 / 3; }
-
-@media screen and (max-width: 1200px) {
-
-    .foto { grid-template: 12% 17% 12% 30% 29% / 40% 60%; }
-
-    .foto figure,
-    .foto img { grid-area: 1 / 1 / 5 / 2; }
-    
-    .foto-display1 { grid-area: 1 / 2 / 2 / 3; }
-    
-    .foto-display2 { grid-area: 2 / 2 / 3 / 3; }
-    
-    .foto-display3 { grid-area: 3 / 2 / 4 / 3; }
-    
-    .foto-display4 { grid-area: 4 / 2 / 5 / 3; }
-    
-    .foto-display5 { grid-area: 5 / 1 / 6 / 3; }
-}
-
-@media screen and (max-width: 900px) {
-
-    .foto { grid-template: 15% 20% 15% 20% 30% / 35% 65%; }
-
-    .foto figure,
-    .foto img { grid-area: 1 / 1 / 4 / 2; }
-    
-    .foto-display1 { grid-area: 1 / 2 / 2 / 3; }
-    
-    .foto-display2 { grid-area: 2 / 2 / 3 / 3; }
-    
-    .foto-display3 { grid-area: 3 / 2 / 4 / 3; }
-    
-    .foto-display4 { grid-area: 4 / 1 / 5 / 3; }
-    
-    .foto-display5 { grid-area: 5 / 1 / 6 / 3; }
 }
 
 @media screen and (max-width: 750px) {
 
-    .foto { display: block; }
-
-    .foto figure { margin: auto; }
+    .foto figure { 
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-left: auto;
+        float: none;
+    }
 
     .foto img { max-height: 650px; }
 
@@ -285,10 +240,6 @@ nav ul {
         margin-bottom: 10px;
         margin-left: 20px; 
     }
-
-    .foto .foto-display1 { margin-top: 20px; }
-
-    .foto .foto-display5 { margin-bottom: 50px; }
 }
 
 /* ++++++++++++++++++++++++++++++++ BIBLIOGRAFIA +++++++++++++++++++++++++++++++++++++*/
@@ -401,7 +352,6 @@ footer ul {
     background-color: $blanco;
     border: solid 1px $violeta;
     border-radius: 5px;
-    transition: background-color 1s ease-out;
 }
 
 button.tras {

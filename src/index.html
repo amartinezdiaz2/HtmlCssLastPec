@@ -4,8 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preload" href="assets/styles/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="assets/styles/main.scss"></noscript>
         <style type="text/css">
             .fa, .fas, .fa-solid, .far, .fa-regular, .fal, .fa-light, .fat, .fa-thin, .fad, .fa-duotone, .fab, .fa-brands {
                 -moz-osx-font-smoothing: grayscale;
@@ -16,10 +14,219 @@
                 font-style: normal;
                 line-height: 1;
             }
+
+            :root,:host {
+                --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+                --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+                --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free"
+            }
+
+            .fas,.fa-solid {
+                font-family: "Font Awesome 6 Free";
+                font-weight: 900
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0
+            }
+
+            body {
+                background-color: #fff;
+                font-family: Lora;
+                font-weight: 400;
+                line-height: 1.5
+            }
+
+            @media screen and (orientation: portrait) {
+                body {
+                    font-size:.9rem
+                }
+            }
+
+            button {
+                cursor: pointer
+            }
+
+            p {
+                margin-bottom: 10px
+            }
+
+            header {
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: #fff;
+                font-size: 1.2rem
+            }
+
+            @media screen and (orientation: portrait) {
+                header {
+                    font-size:1rem
+                }
+            }
+
+            header h1 {
+                background: url(./assets/img/WoolfLook.jpg) 50%;
+                border-bottom: 2px solid #330b61;
+                padding: 20px 0
+            }
+
+            svg {
+                position: relative;
+                top: 15px
+            }
+
+            polygon {
+                animation: poly 3s ease-in-out infinite alternate
+            }
+
+            .first,.fourth {
+                fill: #330b61
+            }
+
+            .second {
+                fill: #d0b1f3
+            }
+
+            .third {
+                fill: #822be6
+            }
+
+            nav {
+                text-align: center;
+                background-color: #822be6;
+                border-bottom: 2px solid #330b61;
+                padding: 10px 0
+            }
+
+            a {
+                color: #000;
+                font-weight: 500;
+                text-decoration: none
+            }
+
+            nav a {
+                color: #fff
+            }
+
+            .current {
+                color: #330b61;
+                font-weight: 800
+            }
+
+            nav ul {
+                width: 90vw;
+                max-width: 450px;
+                justify-content: space-between;
+                margin: auto;
+                font-size: 1.2rem;
+                list-style: none;
+                display: flex
+            }
+
+            @media screen and (orientation: portrait) {
+                nav ul {
+                    font-size:1rem;
+                    display: block
+                }
+            }
+
+            .figures {
+                max-width: 1300px;
+                justify-content: center;
+                margin: auto;
+                padding: 30px 0;
+                display: flex
+            }
+
+            .figures figure,.figures img {
+                max-width: 400px;
+                max-height: 550px;
+                transition: transform 1s ease-out
+            }
+
+            .figures img {
+                border-radius: 10px
+            }
+
+            #woolfuno,#woolftres {
+                -webkit-clip-path: polygon(33% 10%,66% 10%,100% 60%,0% 60%);
+                clip-path: polygon(33% 10%,66% 10%,100% 60%,0% 60%)
+            }
+
+            #woolfdos {
+                -webkit-clip-path: polygon(0% 10%,100% 10%,66% 60%,33% 60%);
+                clip-path: polygon(0% 10%,100% 10%,66% 60%,33% 60%)
+            }
+
+            @media screen and (max-width: 600px) {
+                .figures figure,.figures img {
+                    max-width:300px;
+                    max-height: 450px
+                }
+
+                .figures figure {
+                    margin-top: 30px
+                }
+
+                #woolfuno,#woolftres {
+                    display: none
+                }
+
+                #woolfdos {
+                    -webkit-clip-path: polygon(0% 0%,0% 100%,100% 100%,100% 0%);
+                    clip-path: polygon(0% 0%,0% 100%,100% 100%,100% 0%)
+                }
+            }
+
+            .biografia,.libros {
+                width: 90vw;
+                max-width: 1000px;
+                border: 2px solid #822be6;
+                border-radius: 5px;
+                margin: 30px auto;
+                padding: 10px
+            }
+
+            footer {
+                background: linear-gradient(90deg,#d0b1f3,#330b61);
+                padding: 20px;
+                display: flex
+            }
+
+            footer svg {
+                margin-right: 20px;
+                top: 30px
+            }
+
+            footer ul {
+                font-size: 1.2rem;
+                list-style: none
+            }
+
+            .footer-display,.footer-display li {
+                display: flex
+            }
+
+            .footer-display ul {
+                display: none
+            }
+
+            .footer-display button:not(.footer-button) {
+                width: 15px;
+                height: 30px;
+                border: none;
+                margin-left: 5px;
+                margin-right: 10px
+            }
         </style>
+        <link rel="preload" href="assets/styles/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="assets/styles/main.scss"></noscript>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="preload" as="font" onload="this.onload=null;this.rel='stylesheet'">
         <title>Virginia Woolf</title>
     </head>
     <body>
@@ -45,41 +252,59 @@
         </nav>
         <main>
             <div class="figures">
-                <figure id="woolfuno">
-                    <img loading="lazy" srcset="
+                <picture id="woolfuno">
+                    <source type="image/webp" 
+                        srcset="assets/img/VirginiaWoolf.webp 640w, assets/img/VirginiaWoolf2.webp 502w">
+                    <source type="image/jpeg" 
+                        srcset="assets/img/VirginiaWoolf.jpg 640w, assets/img/VirginiaWoolf2.jpg 502w">
+                    <img srcset="
                         assets/img/VirginiaWoolf.jpg 640w,
                         assets/img/VirginiaWoolf2.jpg 502w"
+                        width="400"
+                        height="546"
                         sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1000px) 25vw,
                             (max-width: 2000px) 30vw" 
                         src="assets/img/VirginiaWoolf.jpg" 
-                        alt="Virginia Woolf" class="lazyload">
-                </figure>
-                <figure id="woolfdos">
-                    <img loading="lazy" srcset="
+                        alt="Virginia Woolf">
+                </picture>
+                <picture id="woolfdos">
+                    <source type="image/webp" 
+                        srcset="assets/img/Virginia_Woolf_1927.webp 640w, assets/img/Virginia_Woolf_1927_2.webp 502w">
+                    <source type="image/jpeg" 
+                        srcset="assets/img/Virginia_Woolf_1927.jpg 640w, assets/img/Virginia_Woolf_1927_2.jpg 502w">
+                    <img srcset="
                         assets/img/Virginia_Woolf_1927.jpg 640w,
                         assets/img/Virginia_Woolf_1927_2.jpg 502w,
                         assets/img/Virginia_Woolf_1927_2.jpg 502w"
                         sizes="auto" 
+                        width="400"
+                        height="546"
                         sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1000px) 25vw,
                             (max-width: 2000px) 30vw" 
                             src="assets/img/Virginia_Woolf_1927.jpg" 
-                        alt="Virginia Woolf" class="lazyload">
-                </figure>
-                <figure id="woolftres">
-                    <img loading="lazy" srcset="
+                        alt="Virginia Woolf">
+                </picture>
+                <picture id="woolftres">
+                    <source type="image/webp" 
+                        srcset="assets/img/Woolf_by_Beresford_3.webp 640w, assets/img/Woolf_by_Beresford_32.webp 502w">
+                    <source type="image/jpeg" 
+                        srcset="assets/img/Woolf_by_Beresford_3.jpg 640w, assets/img/Woolf_by_Beresford_32.jpg 502w">
+                    <img srcset="
                         assets/img/Woolf_by_Beresford_3.jpg 640w,
                         assets/img/Woolf_by_Beresford_32.jpg 479w"
+                        width="400"
+                        height="546"
                         sizes="
                             (max-width: 600px) 80vw,
                             (max-width: 1000px) 25vw,
                             (max-width: 2000px) 30vw" 
                             src="assets/img/Woolf_by_Beresford_3.jpg" 
-                        alt="Virginia Woolf" class="lazyload">
-                </figure>
+                        alt="Virginia Woolf">
+                </picture>
             </div>
             <div class="biografia">
                 <p>

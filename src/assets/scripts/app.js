@@ -399,6 +399,10 @@ if(window.location.href.includes("librodetalle")){
     // @ts-ignore
     informacion.firstElementChild.lastElementChild.src = libro.figure.toString();
     // @ts-ignore
+    informacion.firstElementChild.lastElementChild.width = 300;
+    // @ts-ignore
+    informacion.firstElementChild.lastElementChild.height = 450;
+    // @ts-ignore
     informacion.firstElementChild.lastElementChild.srcset = libro.figure.href + ' 300w, ' + libro.figureS.href + ' 200w';
 
     let centro = document.getElementsByClassName('centro')[0];
@@ -433,7 +437,6 @@ if(window.location.href.includes("librodetalle")){
             source1.className = "lazyload";
             oFigure.appendChild(source1);
             let source2 = document.createElement("source");
-            source2.type = "image/jpeg";
             source2.srcset = otroLibro.figureS.href + ' 200w, ' + otroLibro.figureSt.href + ' 150w';
             source2.className = "lazyload";
             oFigure.appendChild(source2);
