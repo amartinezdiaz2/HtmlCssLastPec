@@ -25,34 +25,28 @@
 
             .fas,.fa-solid {
                 font-family: "Font Awesome 6 Free";
-                font-weight: 900
+                font-weight: 900;
             }
 
             * {
                 box-sizing: border-box;
                 margin: 0;
-                padding: 0
+                padding: 0;
             }
 
             body {
                 background-color: #fff;
                 font-family: Lora;
                 font-weight: 400;
-                line-height: 1.5
-            }
-
-            @media screen and (orientation: portrait) {
-                body {
-                    font-size:.9rem
-                }
+                line-height: 1.5;
             }
 
             button {
-                cursor: pointer
+                cursor: pointer;
             }
 
             p {
-                margin-bottom: 10px
+                margin-bottom: 10px;
             }
 
             header {
@@ -60,62 +54,63 @@
                 text-align: center;
                 text-transform: uppercase;
                 background-color: #fff;
-                font-size: 1.2rem
-            }
-
-            @media screen and (orientation: portrait) {
-                header {
-                    font-size:1rem
-                }
+                font-size: 1.2rem;
             }
 
             header h1 {
-                background: url(../assets/img/WoolfLook.webp) 50%;
+                background: url("../assets/img/WoolfLook.webp") center;
                 border-bottom: 2px solid #330b61;
-                padding: 20px 0
+                padding: 20px 0;
             }
 
             svg {
                 position: relative;
-                top: 15px
+                top: 15px;
             }
 
             polygon {
-                animation: poly 3s ease-in-out infinite alternate
+                animation: poly 3s ease-in-out infinite alternate;
             }
 
-            .first,.fourth {
-                fill: #330b61
+            .first, .fourth {
+                fill: #330b61;
             }
 
             .second {
-                fill: #d0b1f3
+                fill: #d0b1f3;
             }
 
             .third {
-                fill: #822be6
+                fill: #822be6;
             }
 
             nav {
                 text-align: center;
                 background-color: #822be6;
                 border-bottom: 2px solid #330b61;
-                padding: 10px 0
+                padding: 10px 0;
+            }
+
+            h1:not(header h1) {
+                text-align: center;
+                padding: 30px 0;
+                font-size: 2.5rem;
+                font-weight: 800;
             }
 
             a {
                 color: #000;
                 font-weight: 500;
-                text-decoration: none
+                text-decoration: none;
             }
 
             nav a {
-                color: #fff
+                color: #fff;
             }
 
             .current {
                 color: #330b61;
-                font-weight: 800
+                font-weight: 800;
             }
 
             nav ul {
@@ -125,111 +120,41 @@
                 margin: auto;
                 font-size: 1.2rem;
                 list-style: none;
-                display: flex
-            }
-
-            @media screen and (orientation: portrait) {
-                nav ul {
-                    font-size:1rem;
-                    display: block
-                }
+                display: flex;
             }
 
             footer {
-                background: linear-gradient(90deg,#d0b1f3,#330b61);
+                background: linear-gradient(90deg, #d0b1f3, #330b61);
                 padding: 20px;
-                display: flex
+                display: flex;
             }
 
             footer svg {
                 margin-right: 20px;
-                top: 30px
+                top: 30px;
             }
 
             footer ul {
                 font-size: 1.2rem;
-                list-style: none
+                list-style: none;
             }
 
-            .footer-display,.footer-display li {
-                display: flex
+            .footer-display, .footer-display li {
+                display: flex;
             }
 
             .footer-display ul {
-                display: none
+                display: none;
             }
 
-            .categoria {
-                max-width: 1300px;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-content: space-between;
-                margin: auto;
-                display: grid
-            }
-
-            @media screen and (max-width: 1300px) {
-                .categoria {
-                    max-width:900px;
-                    grid-template-columns: 1fr 1fr
-                }
-            }
-
-            @media screen and (orientation: portrait) {
-                .categoria {
-                    max-width:425px;
-                    display: block
-                }
-            }
-
-            .categoria picture,.categoria img {
-                max-width: 200px;
-                max-height: 300px
-            }
-
-            @media screen and (orientation: portrait) {
-                .categoria picture,.categoria img {
-                    max-width:150px;
-                    max-height: 250px
-                }
-            }
-
-            .Novela,.Ensayo,.Cuento,.Biografia {
-                max-width: 425px;
-                background-color: #d0b1f3;
-                border-radius: 5px;
-                margin: 10px;
-                padding: 10px;
-                display: flex
-            }
-
-            @media screen and (orientation: portrait) {
-                .Novela,.Ensayo,.Cuento,.Biografia {
-                    max-width:350px
-                }
-            }
-
-            .Novela div,.Ensayo div,.Cuento div,.Biografia div {
-                margin-left: 10px
-            }
-
-            .coleccion button {
-                width: 70px;
-                height: 100%;
-                background-color: #fff;
-                border: 1px solid #822be6;
-                border-radius: 5px;
-                padding: 5px;
-                transition: background-color 1s ease-out
-            }   
-
-            button:not(.coleccion button):not(.libro-boton):not(footer button) {
+            button:not(.coleccion button, .libro-boton, footer button) {
                 width: 60px;
                 height: 30px;
                 color: #fff;
                 background-color: #330b61;
                 border: none;
                 border-radius: 5px;
-                transition: color 1s ease-out
+                transition: color 1s ease-out;
             }
 
             .footer-display button:not(.footer-button) {
@@ -237,40 +162,90 @@
                 height: 30px;
                 border: none;
                 margin-left: 5px;
-                margin-right: 10px
+                margin-right: 10px;
             }
 
-            .coleccion ul li {
-                max-width: 100px;
-                padding-top: 1px;
-                padding-bottom: 5px
-            }
-
-            .coleccion ul {
+            .informacion {
                 width: 90vw;
-                max-width: 450px;
+                max-width: 1200px;
+                background-color: #d0b1f3;
+                border-radius: 50px;
+                grid-template-columns: 1fr 1fr;
                 justify-content: space-between;
-                margin: 5px auto auto;
-                font-size: 1.2rem;
-                list-style: none;
-                display: flex
+                margin: 50px auto;
+                padding: 50px;
+                display: grid;
             }
 
-            @media screen and (orientation: portrait) {
-                .coleccion button {
-                    border:none;
-                    margin: 0 15px
-                }
+            .derecha {
+                grid-column: 1 / 3;
+            }
 
-                .coleccion ul {
-                    display: block
-                }
+            .derecha h3 {
+                margin-top: 10px;
+            }
 
-                .coleccion li {
-                    border-bottom: 1px solid #330b61;
-                    border-bottom-right-radius: 7px;
-                    margin: auto
-                }
+            .derecha ul {
+                width: 80vw;
+                max-width: 1100px;
+                height: 450px;
+                background: linear-gradient(90deg, #d0b1f3, #330b61);
+                border: 5px solid #330b61;
+                grid-template-columns: repeat(4, 1fr);
+                justify-content: space-between;
+                margin: 5px auto;
+                padding: 10px;
+                list-style: none;
+                display: grid;
+                overflow-x: hidden;
+                overflow-y: scroll;
+            }
+
+            .derecha ul li {
+                max-width: 150px;
+                margin: 5px auto;
+            }
+
+            .derecha ul li img, .informacion img:not(.derecha img) {
+                width: 100%;
+            }
+
+            .derecha ul li picture {
+                width: 150px;
+                height: 210px;
+                margin-bottom: 5px;
+            }
+
+            .informacion picture:not(.derecha picture) {
+                width: 60vw;
+                max-width: 300px;
+                margin: auto;
+            }
+
+            .centro p {
+                max-width: 500px;
+                text-align: justify;
+            }
+
+            .centro h1 {
+                text-align: left;
+                margin-bottom: 10px;
+                padding: 0;
+            }
+
+            .centro h3 {
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            .libro-boton {
+                width: 100%;
+                height: 30px;
+                color: #fff;
+                background-color: #330b61;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 10px;
             }
         </style>
         <title id="title">Virginia Woolf</title>

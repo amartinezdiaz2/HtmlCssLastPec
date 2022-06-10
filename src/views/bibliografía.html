@@ -101,6 +101,13 @@
                 padding: 10px 0
             }
 
+            h1:not(header h1) {
+                padding: 30px 0;
+                font-size: 2.5rem;
+                font-weight: 800;
+                text-align: center;
+            }
+
             a {
                 color: #000;
                 font-weight: 500;
@@ -133,6 +140,12 @@
                 }
             }
 
+            ol {
+                width: 85vw;
+                max-width: 800px;
+                margin: 0 auto 50px;
+            }
+
             footer {
                 background: linear-gradient(90deg,#d0b1f3,#330b61);
                 padding: 20px;
@@ -157,118 +170,12 @@
                 display: none
             }
 
-            .categoria {
-                max-width: 1300px;
-                grid-template-columns: 1fr 1fr 1fr;
-                justify-content: space-between;
-                margin: auto;
-                display: grid
-            }
-
-            @media screen and (max-width: 1300px) {
-                .categoria {
-                    max-width:900px;
-                    grid-template-columns: 1fr 1fr
-                }
-            }
-
-            @media screen and (orientation: portrait) {
-                .categoria {
-                    max-width:425px;
-                    display: block
-                }
-            }
-
-            .categoria picture,.categoria img {
-                max-width: 200px;
-                max-height: 300px
-            }
-
-            @media screen and (orientation: portrait) {
-                .categoria picture,.categoria img {
-                    max-width:150px;
-                    max-height: 250px
-                }
-            }
-
-            .Novela,.Ensayo,.Cuento,.Biografia {
-                max-width: 425px;
-                background-color: #d0b1f3;
-                border-radius: 5px;
-                margin: 10px;
-                padding: 10px;
-                display: flex
-            }
-
-            @media screen and (orientation: portrait) {
-                .Novela,.Ensayo,.Cuento,.Biografia {
-                    max-width:350px
-                }
-            }
-
-            .Novela div,.Ensayo div,.Cuento div,.Biografia div {
-                margin-left: 10px
-            }
-
-            .coleccion button {
-                width: 70px;
-                height: 100%;
-                background-color: #fff;
-                border: 1px solid #822be6;
-                border-radius: 5px;
-                padding: 5px;
-                transition: background-color 1s ease-out
-            }   
-
-            button:not(.coleccion button):not(.libro-boton):not(footer button) {
-                width: 60px;
-                height: 30px;
-                color: #fff;
-                background-color: #330b61;
-                border: none;
-                border-radius: 5px;
-                transition: color 1s ease-out
-            }
-
             .footer-display button:not(.footer-button) {
                 width: 15px;
                 height: 30px;
                 border: none;
                 margin-left: 5px;
                 margin-right: 10px
-            }
-
-            .coleccion ul li {
-                max-width: 100px;
-                padding-top: 1px;
-                padding-bottom: 5px
-            }
-
-            .coleccion ul {
-                width: 90vw;
-                max-width: 450px;
-                justify-content: space-between;
-                margin: 5px auto auto;
-                font-size: 1.2rem;
-                list-style: none;
-                display: flex
-            }
-
-            @media screen and (orientation: portrait) {
-                .coleccion button {
-                    border:none;
-                    margin: 0 15px
-                }
-
-                .coleccion ul {
-                    display: block
-                }
-
-                .coleccion li {
-                    border-bottom: 1px solid #330b61;
-                    border-bottom-right-radius: 7px;
-                    margin: auto
-                }
             }
         </style>
         <link rel="preload" href="../assets/styles/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
