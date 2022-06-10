@@ -171,18 +171,18 @@ nav ul {
 
 .foto {
     max-width: 1300px;
-    margin: 30px auto;
-    padding-right: 20px;
     min-height: 700px;
+    padding-right: 20px;
+    margin: 30px auto;
 }
 
 .foto figure {
+    float: left;
     max-width: 500px;
     max-height: 680px;
     padding: 10px;
-    background-color: $violeta;
-    float: left;
     margin-right: 30px;
+    background-color: $violeta;
 }
 
 .foto img {
@@ -227,10 +227,10 @@ nav ul {
 @media screen and (max-width: 750px) {
 
     .foto figure { 
+        float: none;
         margin-right: auto;
         margin-bottom: 20px;
         margin-left: auto;
-        float: none;
     }
 
     .foto img { max-height: 650px; }
